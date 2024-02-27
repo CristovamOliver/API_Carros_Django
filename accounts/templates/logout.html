@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form method="post">
+        {% csrf_token %}
+
+        <table>
+            {{ logout_form.as_table }}
+        </table>
+
+        <input type="submit" value="Sair">
+    </form>
+
+{% endblock %}
